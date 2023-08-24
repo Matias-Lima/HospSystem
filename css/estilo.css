@@ -1,0 +1,579 @@
+/*Folha de estilo do sistema*/
+
+*{ /*Gerando a margin e o padding, visando um design responsivo*/
+    /*O conteúdo se adaptará a tela*/
+    margin: 0; 
+    padding: 0;
+}
+
+
+body{
+    font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+    text-align: justify; /*Alinhamento de texto*/
+
+    /*Estilização da margem*/
+    margin: 0px; /*Gera toda a margem da página*/
+
+    /*Estilização da borda*/
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: #FF0000;
+
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF0000;
+
+    /*Plano de fundo*/
+    background-color: #FFFFFF;
+}
+
+#cabecalho{ /*Estiliza a div cabecalho*/
+    height: 250px; /*altura*/
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 150px;
+}	
+/*Redimencionando a logo*/
+#cabecalho table tr td img {
+    /*Altura e largura máximas*/
+    max-width: 400px; 
+    max-height: 400px;
+
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;
+    margin-left: 45px;
+}
+
+#linhaBordaMenu{ /*Linha entre o cabeçalho e o slide de fotos*/
+    border: 3px solid #FF0000;
+}
+
+/*Estilização geral do menu*/  /**/
+.menu{
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    border: 2px solid #c0c0c0; /*Borda do menu*/
+    float: right; /*Onde o menu irá flutuar*/
+}
+
+/*Estilização de itens do menu*/	/**/	
+.menu li{ /*Estilizando a lista*/
+    position: relative; /*Definindo como relativo, pois ele poderá se adaptar melhor aos outros elementos*/
+    float: left; /*onde vai flutuar*/
+    background-color: #FFFFFF;
+    border-right: 2px solid #C0C0C0;
+}
+
+.menu li a{ /*Estilizando os links que estão na lista*/
+    color: #333333; 
+    text-decoration: none; /*Desabilitando linha embaixo do lik*/
+    padding: 5px 10px; 
+    display: block; /*Definindo que o conteúdo deve estar em bloco*/
+}
+
+.menu li a:hover{ /*Estilizando o link quando pasar o mouse nele*/	
+    color:#d31141;
+    text-shadow:0 0 0.2em #F87, 0 0 0.2em #F87; /*Adicionando sombra na vertical e horizontal*/
+    font-family: courier;
+    font-size: 15px
+}
+
+.elementosMenu{ /*Configuração dos nomes: Home, Dados Abertos...*/
+    font-size: 16px;
+    text-align: center; 
+}	
+
+/*Estilizando o slider de fotos*/	
+.slideFotos{
+    width: 100%; /*Largura do slide*/
+}
+
+/*Estilização do botão da direita (próximo slide)*/
+button.slick-prev{
+    font-size: 0;
+    border: none; /*Retirando a borda padrão do botão*/
+    width: 21px;
+    height: 51px;
+    position: absolute; /*Posicionando o botão*/
+    z-index: 9; /*Ajuda a deixar um elemento sobreposto a outro*/
+    top: 45%; /*Descendo o botão*/
+    left: 0; /*Posição do botão na esquerda*/
+}	
+
+/*Estilização do botão da esquerda (slide anterior)*/
+button.slick-next{
+    font-size: 0;
+    border: none; /*Retirando a borda padrão do botão*/
+    width: 21px;
+    height: 51px;
+    position: absolute; /*Posicionando o botão*/
+    z-index: 9; /*Ajuda a deixar um elemento sobreposto a outro*/
+    top: 45%; /*Descendo o botão*/
+    right: 0; /*Posição do botão na direita*/
+}	
+
+.slick-dots{ /*Definindo as caracterísitcas e as posições*/
+    margin: 0 auto;
+    width: 50%; /*centralizando*/
+    position: absolute;
+    left: 48%; /*Posição dos botões*/
+    top: 850px;
+}	
+
+.slick-dots li{ 
+    display:inline-block; /*Colocando um li ao lado do outro*/
+}	
+
+.slick-dots li button{
+    font-size: 0;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%; /*Definindo que é um círculo*/
+    width: 20px;
+    height: 20px;	
+}	
+
+/*Configuração do botão ativo*/
+.slick-dots li.slick-active button{
+    background-color:#FF0000;
+}	
+
+/*Estilizando a div saibaMais*/ 
+#saibaMais{
+    background-color: #FF0000;	
+    height: 80px;
+    display: block; /*Isolando o bloco do restabte do código*/
+}	
+
+/*Estilizando o botão*/
+#saibaMais a button{ 
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    border: 2px solid #c0c0c0; /*Borda do menu*/
+    float: right; /*Onde o menu irá flutuar*/
+    margin-left: 150px; 
+    margin-right: 250px; 
+    font-size: 16px;
+    text-align: center;
+    width: 150px;
+    position: relative;
+    background-color: #FFFFFF;
+}	
+/*Estilizando o parágrafo da div*/
+#saibaMais p{
+    color: #FFFFFF;
+    margin-left: 250px; 
+    font-size: 25px;
+    font-weight: bold; /*Negrito*/
+    font-style: italic;
+}	
+
+/*Estilização da div funcionalidades e seus elementos*/
+
+#funcionalidades{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}	
+
+#funcionalidades h3{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}	
+
+#funcionalidades table{
+    margin-left: 240px;
+}	
+
+#funcionalidades table tr th img{
+    max-width: 100px;
+    max-height: 100px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;
+    margin-left: 135px;
+}	
+
+#funcionalidades table tr th p{
+    text-align: center;
+    margin-left: 130px;
+}	
+
+/*Estilizando a div que coleta o e-mail para mandar atualizações*/
+#receberAtualizacoes{
+    background-color: #FF0000;	
+    height: 160px;
+    display: block; /*Isolando o bloco do restabte do código*/	
+    margin-top: 20px;
+    margin-bottom: 20px;
+}	
+
+#receberAtualizacoes p{
+    color: #FFFFFF;
+    margin-left: 400px; 
+    font-size: 25px;
+    font-weight: bold; /*Negrito*/
+    font-style: italic;
+}	
+
+#receberAtualizacoes form p{
+    font-size: 15px;
+    text-align: center;
+    margin-left: 250px; 
+    margin-right: 250px; 
+}	
+
+#receberAtualizacoes form input{
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    border: 2px solid #C0C0C0; /*Borda do menu*/
+    float: center; /*Onde o menu irá flutuar*/
+    margin-left: 250px; 
+    margin-right: 250px; 
+    font-size: 14px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    background-color: #FFFFFF;	
+}	
+
+footer{
+    height: 120px;
+    background-color: #FFFFFF;	
+    margin-top: 20px;
+    margin-right: 20px;
+}	
+
+footer p{
+    color: #000000;
+    margin-top: 20px;
+    font-style: italic;
+    text-align: center;
+}	
+
+footer table{
+    margin-left: 600px;
+    margin-right: 130px;
+}	
+
+footer table tr th img{
+    max-width: 50px;
+    max-height: 50px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;
+}	
+
+/*ESTILIZAÇÃO DO DOCUMENTO acesso.html*/
+
+/*Estilização da div login*/
+#login{
+    width: 500px;
+    height: 250px;    
+    margin: 0px auto;
+    position: relative;
+    margin-top: 40px;
+}
+
+#login h1{	
+    font-size: 35px;
+    color: #FF0000;
+    padding: 2px 0 30px 0; /*padding-top, padding-right, padding-bottom, padding-left*/
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#login h1:after{ /*Cria uma barra abaixo do título separando o conteúdo*/
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    /*Criando a linha com a extensão webkit, a qual está em testes*/
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 
+    background: linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 
+}
+
+#login form{
+    font-size: 15px;
+    color: #FF0000;	
+    padding: 2px 0 10px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#login form table{
+    margin-left: 130px;
+}
+
+#login form table tr th{
+    padding-right: 40px;
+}	
+
+/*Borda da caixa de login e senha*/
+.caixaLogin{	
+    border: 2px solid #c0c0c0;	
+}	
+
+.botaoForm{
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    border: 2px solid #c0c0c0; /*Borda do botão*/
+    float: right; /*Onde o botão irá flutuar*/
+    font-size: 14px;
+    text-align: center;
+    width: 100px;
+    position: relative;
+    background-color: #FFFFFF;
+}	
+
+/*ESTILIZAÇÃO DO ARQUIVO menuFuncionalidades.php*/
+/*Estilizando a div funcionalidadesSistema*/
+#funcionalidadesSistema{
+    width: 100%;
+    margin-left: 150px;
+	margin-right: 100px;
+    margin: 0px auto;
+    position: relative;
+    margin-top: 20px;
+}	
+
+#funcionalidadesSistema h3, h5{
+    font-size: 18px;
+    color: #FF0000;
+    padding: 2px 0 5px 0; /*padding-top, padding-right, padding-bottom, padding-left*/
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center; 
+}
+
+#funcionalidadesSistema h6{
+    font-size: 15px;
+    text-align: center;
+    margin-right: 60px;
+}
+
+#funcionalidadesSistema nav{
+	margin-left: 350px;
+}	
+
+/*ESTILIZAÇÃO DO ARQUIVO sobre.html*/
+
+#sobre{
+    width:100%;
+}	
+
+#sobreTitulo {	
+    margin-top: 20px;
+    margin-left: 250px;
+    margin-right: 230px;
+    margin-bottom: 30px;
+}	
+
+#sobreTitulo h1{
+    text-align: center;
+    font-size: 28px;
+    color: #FF0000;
+    padding: 2px 0 10px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+}	
+
+#sobreTitulo h1:after{ /*Cria uma barra abaixo do título separando o conteúdo*/
+    content: ' '; /*Definindo como elemento dinâmico*/
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 
+    background: linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 
+}
+
+#historia{
+    width: 60%;
+    margin-left: 280px;
+    margin-right: 130px;
+}
+
+#historia p{
+    text-align: justify;
+    text-indent: 20px; /*Criando recuo na primeira linha do parágrafo*/
+    font-family: Verdana;
+    font-size: 14px;
+}
+
+#nossaEquipe{
+    margin-top: 40px;
+    margin-left: 250px;
+    margin-right: 230px;
+    margin-bottom: 30px;
+}
+
+#nossaEquipe h1{
+    text-align: center;
+    font-size: 25px;
+    color: #FF0000;
+    padding: 2px 0 10px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#nossaEquipe h1:after{
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 
+    background: linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 	
+}	
+
+.iconesRedesSociais{
+    max-width: 30px;
+    max-height: 30px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;
+}
+
+#integrantes{
+    margin-left: 25px;
+}	
+
+#integrantes table tr th{
+    padding: 5px;
+}
+
+#integrantes p{
+    padding: 5px;
+}	
+
+.nomes{
+    margin-left: 28px;
+    font-family: Verdana;
+    font-size: 13px;
+    font-weight: bold;
+}	
+
+.nomeCleytonMatiasRodrigo{
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    margin-left: 37px;
+    font-family: Verdana;
+    font-size: 13px;
+    font-weight: bold;
+}	
+
+/*Estilização foto de cada membro da equipe*/
+.fotoIndividual{
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    max-width: 200px;
+    max-height: 200px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;	
+}	
+
+.fraseFinal{
+    font-family: Verdana;
+    font-size: 20px;
+    margin-left: 75px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-style: italic;
+}	
+
+#iconeCleyton{
+    margin-left: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;
+}	
+
+#iconeMatiasRodrigo{
+    margin-left: 70px;
+    max-width: 30px;
+    max-height: 30px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;
+}	
+
+/*ESTILIZAÇÃO do arquivo dadosAbertos.html*/
+
+/*div informações*/
+.informacoes{
+    margin-top: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+}	
+
+.informacoes h1{
+    text-align: center;
+    font-size: 30px;
+    color: #FF0000;
+    padding: 30px 0 20px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}	
+
+.informacoes img{
+    list-style: none; /*Desabilitando algum estilo pré-existente*/
+    max-width: 500px;
+    max-height: 500px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;	
+    margin-left: 280px;
+}	
+
+/*ESTILIZAÇÃO do arquivo contatos.html*/
+
+#contatosUteis img{
+	list-style: none; /*Desabilitando algum estilo pré-existente*/
+    max-width: 230px;
+    max-height: 230px;
+    width: auto; /*O auto serve para ajustar*/
+    height: auto;	
+}	
+
+#contatosUteis h1{
+    text-align: center;
+    font-size: 25px;
+    color: #FF0000;
+    padding: 2px 0 10px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
+#contatosUteis h1:after{
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 
+    background: linear-gradient(left, rgba(255,0,0,0) 0%,rgba(255,0,0,0.8) 20%,rgba(255,0,0,1) 53%,rgba(255,0,0,0.8) 79%,rgba(255,0,0,0) 100%); 	
+}	
+
+#contatosUteis{
+	margin-left: 20px;
+	margin-right: 20px;
+}	
+
+#tabelaGeral{
+	list-style: none; /*Desabilitando algum estilo pré-existente*/
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 30px;
+}	
+
+#tabelaDentro tr th{
+	padding: 9px;
+}	
+
+#tabelaDentro p{
+	text-align: center;
+	font-size: 15px;
+    color: #FF0000;
+    padding: 2px 0 10px 0;
+    font-family: Arial,sans-serif;
+    font-weight: bold;
+}	

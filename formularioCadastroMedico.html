@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<!HTTP-EQUIV controlar ações do browser e especifica melhor as infos>
+		
+        <title>HospSystem - Cadastro M&eacute;dico</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/estiloFormularioMedico.css">
+		<link rel="icon" href="icones/iconebarra.png"> <!Inserindo ícone na barra do navegador>
+    </head>
+    <body> 
+        <! Formulário HTML através do método POST >
+        <form action="inserirDadosDoMedico.php" method="post"> <! Método POST = Requisição HTTP>
+
+            <fieldset>
+                <legend>CADASTRO - M&Eacute;DICO</legend>
+            </fieldset>
+
+            <fieldset>
+                <h4>DADOS DO M&Eacute;DICO</h4><br>
+
+                <label>NOME :</label>
+                <input class ="setenta" type="text" name="nome" value="" placeholder="Jos&eacute; da Silva..." required>
+                &ensp;
+                <label>CPF:</label>
+                <input class ="trinta" type="text" name="cpf" value="" placeholder="Apenas n&uacute;meros" ><br><br>
+
+                <label>ESPECIALIDADE:</label>
+                <input class ="setenta" type="text" name="especialidade" value="" placeholder="">
+                &ensp;
+                <label>CRM:</label>
+                <input class ="trinta" type="text" name="crm" value="" placeholder="Apenas n&uacute;meros" required><br><br>
+
+
+                <label>RG:</label><br>
+                <input class ="vinte" type="text" name="rg" value="" placeholder="Apenas n&uacute;meros"><br>
+
+                <label>DATA DE NASCIMENTO:</label><br>
+                <input class ="vinte" type="text" name="dataNascimento" value="" placeholder="2000/05/25"><br>
+
+                <label>IDADE:</label><br>
+                <input  class ="vinte" type="text" name="idade" value=""><br>
+
+                <label>TELEFONE:</label><br>
+                <input class ="vinte" type="text" name="telefone" value="" placeholder="Apenas n&uacute;meros"><br>
+
+                <label>CIDADE:</label><br>
+                <input class ="vinte" type="text" name="cidade" value=""><br>
+
+                <label>ESTADO:</label><br>
+                <input class ="vinte" type="text" name="estado" value=""><br>
+
+                <label>DIAS DE TRABALHO:</label><br>
+                <input class ="vinte" type="text" name="diaTrabalho" value=""><br>
+
+                <label>HORAS TRABALHADAS:</label><br>
+                <input class ="vinte" type="text" name="horaTrabalha" value=""><br>
+            </fieldset>
+            <input class="button-submit" type="submit" value="ENVIAR">
+        </form>
+    </body>
+</html>
